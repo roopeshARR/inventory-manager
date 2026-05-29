@@ -89,6 +89,9 @@ public class ProductController {
 
 
     /* ================= HISTORY ================= */
-
+    @GetMapping("/")
+    public String home() {
+        return "Inventory Manager Backend Running Successfully";
+    }
     
 }
