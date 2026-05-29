@@ -1,0 +1,14 @@
+package com.example.inventory.repository;
+
+import com.example.inventory.model.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+
+public interface ProductRepository extends JpaRepository<Product,Integer> {
+
+    List<Product> findByName(String name);
+
+    List<Product> findByNameAndBrand(String name,String brand);
+
+    Product findByNameAndBrandAndVariant(String name,String brand,String variant);
+}
